@@ -7,7 +7,7 @@ import json
 def news(request):
    if request.method == 'GET':
       graph = request.user.get_offline_graph()
-      dicti = graph.get('me/likes')
+      dicti = graph.get('/me/likes')
       return HttpResponse(json.dumps(dicti))
 
       
