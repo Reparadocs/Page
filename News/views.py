@@ -6,8 +6,8 @@ from django.http import HttpResponse
 def news(request):
    if request.method == 'GET':
       graph = request.user.get_offline_graph()
-      dicti = graph.get('me/likes')
+      dicti = graph.get('likes')
       
-      return HttpResponse(dicti['data'])
+      return HttpResponse(dicti)
 
       
