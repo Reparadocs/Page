@@ -34,11 +34,11 @@ FACEBOOK_APP_ID = '642102075912899'
 FACEBOOK_APP_SECRET = '45ffbf67872f6737b64e065e8281b9d1'
 
 AUTHENTICATION_BACKENDS = (
-   'django.contrib.auth.backends.ModelBackEnd',
+   #'django.contrib.auth.backends.ModelBackEnd',
    'django_facebook.auth_backends.FacebookBackend',)
 
-#AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
-AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'
+AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
+#AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'
       
 DATABASES = {}
 
