@@ -112,6 +112,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
+
+FACEBOOK_DEFAULT_SCOPE = ['email', 'user_likes','user_about_me']
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 
