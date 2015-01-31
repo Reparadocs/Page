@@ -7,7 +7,9 @@ def news(request):
    if request.method == 'GET':
       graph = request.user.get_offline_graph()
       dicti = graph.get('me/likes')
-      
-      return HttpResponse(dicti)
+      strs = ""
+      for key in dicti:
+         strs += dicti[key] + "\n"
+      return HttpResponse(strs)
 
       
