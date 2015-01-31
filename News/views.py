@@ -8,6 +8,6 @@ def news(request):
    if request.method == 'GET':
       graph = request.user.access_token
       connection = FacebookConnection.request("/me/likes/",access_token=request.user.access_token)
-      return HttpResponse(connection)
+      return HttpResponse(connection['data'])
 
       
