@@ -8,7 +8,6 @@ def news(request):
       graph = request.user.get_offline_graph()
       dicti = graph.get('me/likes')
       
-      return HttpResponse(dicti)
-
+      return HttpResponse(dicti['data'])
 
       
