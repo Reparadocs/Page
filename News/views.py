@@ -8,7 +8,7 @@ def news(request):
       graph = request.user.get_offline_graph()
       name = graph.fql('SELECT name FROM user WHERE uid = me()')
 
-      return HttpResponse(name)
+      return HttpResponse(graph.get('me', fields='id,name'))
 
 
       
