@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from pybing import Bing
+from open_facebook import OpenFacebook
 
 def news(request):
    if request.method == 'GET':
-      bing = Bing('
+      graph = get_facebook_graph(request)
+      return HttpResponse(graph.get('me'))
+
+
       
