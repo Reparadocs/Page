@@ -37,8 +37,8 @@ AUTHENTICATION_BACKENDS = (
    'django.contrib.auth.backends.ModelBackEnd',
    'django_facebook.auth_backends.FacebookBackend',)
 
-AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
-#AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'
+#AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
+AUTH_PROFILE_MODULE = 'django_facebook.FacebookProfile'
       
 DATABASES = {}
 
