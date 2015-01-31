@@ -6,12 +6,8 @@ import json
 
 def news(request):
    if request.method == 'GET':
-      graph = request.user.get_offline_graph()
-      djangofacebooksucks = FacebookUserConverter(graph)
-      lists = djangofacebooksucks.get_likes(100000)
-      strs = ""
-      for like in lists:
-         strs += " " + like['name']
-      return HttpResponse(strs)
+      graph = request.user.access_token
+      connection = FacebookConnection.request("/me/likes/",access_token=request.user.access_token)
+      return HttpResponse(connection)
 
       
