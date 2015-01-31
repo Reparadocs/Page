@@ -7,7 +7,6 @@ import json
 def news(request):
    if request.method == 'GET':
 
-      graph = request.user.get_offline_graph()
-      return HttpResponse(graph.access_token())
+      return HttpResponse(request.user.get_likes())
 
       
