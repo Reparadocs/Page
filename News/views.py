@@ -7,8 +7,9 @@ import json
 def news(request):
    if request.method == 'GET':
       graph = request.user.get_offline_graph()
-      dicti = graph.get('/me/likes')
+      secgraph = get_facebook_graph(request)
+      dicti = secgraph.get('/me/likes')
       data = FacebookConnection.request('/me/likes')
-      return HttpResponse(json.dumps(data))
+      return HttpResponse(json.dumps(dicti))
 
       
