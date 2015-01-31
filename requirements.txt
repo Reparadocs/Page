@@ -15,7 +15,6 @@ modulegraph==0.10.4
 Pillow==2.7.0
 psycopg2==2.5.4
 py2app==0.7.3
-pybing==0.12
 pyOpenSSL==0.13.1
 pyparsing==2.0.1
 python-dateutil==1.5
