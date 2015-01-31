@@ -5,7 +5,7 @@ from django.http import HttpResponse
 
 def news(request):
    if request.method == 'GET':
-      graph = get_facebook_graph(request)
+      graph = request.user.get_offline_graph()
       return HttpResponse(graph.get('me'))
 
 
