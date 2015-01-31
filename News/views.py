@@ -8,6 +8,10 @@ def news(request):
    if request.method == 'GET':
       graph = request.user.get_offline_graph()
       djangofacebooksucks = FacebookUserConverter(graph)
-      return HttpResponse(djangofacebooksucks.get_likes())
+      lists = djangofacebooksucks.get_likes(100000)
+      strs = ""
+      for like in lists:
+         strs += " " + like['name']
+      return HttpResponse(strs)
 
       
