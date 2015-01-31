@@ -6,9 +6,7 @@ from django.http import HttpResponse
 def news(request):
    if request.method == 'GET':
       graph = request.user.get_offline_graph()
-      name = graph.fql('SELECT name FROM user WHERE uid = me()')
-
-      return HttpResponse(graph.get('me', fields='id,name'))
+      return HttpResponse(graph.get('me', fields='id,name,likes'))
 
 
       
